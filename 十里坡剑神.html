@@ -1,0 +1,1043 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>毅力驚人——十里坡剑神 - 傳奇人生</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">傳奇人生</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="十里坡剑神"><a class="header" href="#十里坡剑神">十里坡剑神</a></h1>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E5%8D%81%E9%87%8C%E5%9D%A1%E5%89%91%E7%A5%9E%E6%98%AF%E4%BB%80%E4%B9%88%E6%A2%97">十里坡剑神是什么梗?</a></li>
+<li><a href="#%E4%BB%99%E5%89%91%E5%A5%87%E4%BE%A0%E4%BC%A01%E5%8D%81%E9%87%8C%E5%9D%A1%E7%BB%83%E6%88%90%E5%89%91%E7%A5%9E%E7%9A%84%E4%BC%A0%E8%AF%B4%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%8D%E6%98%AF%E7%9C%9F%E7%9A%84">《仙剑奇侠传1》十里坡练成剑神的传说到底是不是真的？</a>
+<ul>
+<li><a href="#%E4%BA%8B%E4%BB%B6%E7%AE%80%E8%BF%B0">事件简述</a></li>
+<li><a href="#%E4%BA%8B%E4%BB%B6%E6%80%BB%E7%BB%93">事件总结</a></li>
+<li><a href="#%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5%E6%95%B4%E7%90%86">相关链接整理</a></li>
+<li><a href="#%E7%9B%B8%E5%85%B3%E8%A7%86%E9%A2%91%E5%8F%8A%E9%93%BE%E6%8E%A5">相关视频及链接</a></li>
+<li><a href="#%E8%AF%81%E6%98%8E%E8%BF%87%E7%A8%8B%E6%AF%8F%E6%97%A5%E7%9A%84%E8%BF%9B%E5%BA%A6">证明过程（每日的进度）</a>
+<ul>
+<li><a href="#%E7%AC%AC%E4%B8%80%E5%A4%A911%E6%9C%8830%E5%8F%B7">第一天，11月30号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%A4%A912%E6%9C%881%E5%8F%B7">第二天，12月1号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%A4%A912%E6%9C%882%E5%8F%B7">第三天，12月2号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%A4%A912%E6%9C%883%E5%8F%B7">第四天，12月3号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E5%A4%A912%E6%9C%884%E5%8F%B7">第五天，12月4号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E5%A4%A912%E6%9C%885%E5%8F%B7">第六天，12月5号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E5%A4%A912%E6%9C%886%E5%8F%B7">第七天，12月6号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%A4%A912%E6%9C%887%E5%8F%B7">第八天。12月7号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%A4%A912%E6%9C%888%E5%8F%B7">第九天。12月8号。</a></li>
+<li><a href="#%E7%AC%AC%E5%8D%81%E5%A4%A912%E6%9C%889%E5%8F%B7">第十天。12月9号。</a></li>
+<li><a href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E5%A4%A912%E6%9C%8810%E5%8F%B7">第十一天。12月10号。</a></li>
+<li><a href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%A4%A912%E6%9C%8811%E5%8F%B7">第十二天。12月11号。</a></li>
+<li><a href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E5%A4%A912%E6%9C%8812%E5%8F%B7">第十三天。12月12号。</a></li>
+<li><a href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E5%A4%A912%E6%9C%8813%E5%8F%B7">第十四天。12月13号。</a></li>
+<li><a href="#%E7%89%B9%E6%AE%8A%E4%BA%8B%E4%BB%B6">特殊事件</a></li>
+<li><a href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E5%A4%A912%E6%9C%8814%E5%8F%B7">第十五天。12月14号。</a></li>
+<li><a href="#%E7%AC%AC%E5%8D%81%E5%85%AD%E5%A4%A912%E6%9C%8815%E5%8F%B7">第十六天。12月15号。</a></li>
+<li><a href="#%E7%AC%AC%E5%8D%81%E4%B8%83%E5%A4%A912%E6%9C%8816%E5%8F%B7">第十七天。12月16号。</a></li>
+<li><a href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E5%A4%A912%E6%9C%8817%E5%8F%B7">第十八天。12月17号。</a></li>
+<li><a href="#%E7%AC%AC%E5%8D%81%E4%B9%9D%E5%A4%A912%E6%9C%8818%E5%8F%B7">第十九天。12月18号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%A4%A912%E6%9C%8819%E5%8F%B7">第二十天。12月19号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%80%E5%A4%A912%E6%9C%8820%E5%8F%B7">第二十一天。12月20号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%8C%E5%A4%A912%E6%9C%8821%E5%8F%B7">第二十二天。12月21号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%89%E5%A4%A912%E6%9C%8822%E5%8F%B7">第二十三天。12月22号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%A4%A912%E6%9C%8823%E5%8F%B7">第二十四天。12月23号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E5%A4%A912%E6%9C%8824%E5%8F%B7">第二十五天。12月24号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AD%E5%A4%A912%E6%9C%8825%E5%8F%B7">第二十六天。12月25号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E5%A4%A912%E6%9C%8826%E5%8F%B7">第二十七天。12月26号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E5%A4%A912%E6%9C%8827%E5%8F%B7">第二十八天。12月27号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B9%9D%E5%A4%A912%E6%9C%8828%E5%8F%B7">第二十九天。12月28号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%A4%A912%E6%9C%8829%E5%8F%B7">第三十天。12月29号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%80%E5%A4%A912%E6%9C%8830%E5%8F%B7">第三十一天。12月30号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E5%A4%A912%E6%9C%8831%E5%8F%B7">第三十二天。12月31号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%89%E5%A4%A92019%E5%B9%B41%E6%9C%881%E5%8F%B7">第三十三天。2019年1月1号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%9B%9B%E5%A4%A92019%E5%B9%B41%E6%9C%882%E5%8F%B7">第三十四天。2019年1月2号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%94%E5%A4%A92019%E5%B9%B41%E6%9C%883%E5%8F%B7">第三十五天。2019年1月3号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%85%AD%E5%A4%A92019%E5%B9%B41%E6%9C%884%E5%8F%B7">第三十六天。2019年1月4号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%83%E5%A4%A92019%E5%B9%B41%E6%9C%885%E5%8F%B7">第三十七天。2019年1月5号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%85%AB%E5%A4%A92019%E5%B9%B41%E6%9C%886%E5%8F%B7">第三十八天。2019年1月6号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B9%9D%E5%A4%A92019%E5%B9%B41%E6%9C%887%E5%8F%B7">第三十九天。2019年1月7号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%A4%A92019%E5%B9%B41%E6%9C%888%E5%8F%B7">第四十天。2019年1月8号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%80%E5%A4%A92019%E5%B9%B41%E6%9C%889%E5%8F%B7">第四十一天。2019年1月9号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%8C%E5%A4%A92019%E5%B9%B41%E6%9C%8810%E5%8F%B7">第四十二天。2019年1月10号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%89%E5%A4%A92019%E5%B9%B41%E6%9C%8811%E5%8F%B7">第四十三天。2019年1月11号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%9B%9B%E5%A4%A92019%E5%B9%B41%E6%9C%8812%E5%8F%B7">第四十四天。2019年1月12号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%94%E5%A4%A92019%E5%B9%B41%E6%9C%8813%E5%8F%B7">第四十五天。2019年1月13号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%85%AD%E5%A4%A92019%E5%B9%B41%E6%9C%8814%E5%8F%B7">第四十六天。2019年1月14号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%83%E5%A4%A92019%E5%B9%B41%E6%9C%8815%E5%8F%B7">第四十七天。2019年1月15号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%85%AB%E5%A4%A92019%E5%B9%B41%E6%9C%8816%E5%8F%B7">第四十八天。2019年1月16号。</a></li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B9%9D%E5%A4%A92019%E5%B9%B41%E6%9C%8817%E5%8F%B7">第四十九天。2019年1月17号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%A4%A92019%E5%B9%B41%E6%9C%8818%E5%8F%B7">第五十天。2019年1月18号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B8%80%E5%A4%A92019%E5%B9%B41%E6%9C%8819%E5%8F%B7">第五十一天。2019年1月19号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%BA%8C%E5%A4%A92019%E5%B9%B41%E6%9C%8820%E5%8F%B7">第五十二天。2019年1月20号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B8%89%E5%A4%A92019%E5%B9%B41%E6%9C%8821%E5%8F%B7">第五十三天。2019年1月21号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%9B%9B%E5%A4%A92019%E5%B9%B41%E6%9C%8822%E5%8F%B7">第五十四天。2019年1月22号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%BA%94%E5%A4%A92019%E5%B9%B41%E6%9C%8823%E5%8F%B7">第五十五天。2019年1月23号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%85%AD%E5%A4%A92019%E5%B9%B41%E6%9C%8824%E5%8F%B7">第五十六天。2019年1月24号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%85%AB%E5%A4%A92019%E5%B9%B41%E6%9C%8826%E5%8F%B7">第五十八天。2019年1月26号。</a></li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B9%9D%E5%A4%A92019%E5%B9%B41%E6%9C%8827%E5%8F%B7">第五十九天。2019年1月27号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%A4%A92019%E5%B9%B41%E6%9C%8828%E5%8F%B7">第六十天。2019年1月28号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%80%E5%A4%A92019%E5%B9%B41%E6%9C%8829%E5%8F%B7">第六十一天。2019年1月29号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%BA%8C%E5%A4%A92019%E5%B9%B41%E6%9C%8830%E5%8F%B7">第六十二天。2019年1月30号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%89%E5%A4%A92019%E5%B9%B41%E6%9C%8831%E5%8F%B7">第六十三天。2019年1月31号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%9B%9B%E5%A4%A92019%E5%B9%B42%E6%9C%881%E5%8F%B7">第六十四天。2019年2月1号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%BA%94%E5%A4%A92019%E5%B9%B42%E6%9C%882%E5%8F%B7">第六十五天。2019年2月2号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%85%AD%E5%A4%A92019%E5%B9%B42%E6%9C%883%E5%8F%B7">第六十六天。2019年2月3号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%83%E5%A4%A92019%E5%B9%B42%E6%9C%884%E5%8F%B7">第六十七天。2019年2月4号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%85%AB%E5%A4%A9%E5%88%B0%E4%B8%83%E5%8D%81%E4%B8%89%E5%A4%A9">第六十八天到七十三天。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%9B%9B%E5%A4%A92019%E5%B9%B42%E6%9C%8811%E5%8F%B7">第七十四天。2019年2月11号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%BA%94%E5%A4%A92019%E5%B9%B42%E6%9C%8812%E5%8F%B7">第七十五天。2019年2月12号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%85%AD%E5%A4%A92019%E5%B9%B42%E6%9C%8814%E5%8F%B7">第七十六天。2019年2月14号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B8%83%E5%A4%A92019%E5%B9%B42%E6%9C%8815%E5%8F%B7">第七十七天。2019年2月15号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%85%AB%E5%A4%A92019%E5%B9%B42%E6%9C%8816%E5%8F%B7">第七十八天。2019年2月16号。</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B9%9D%E5%A4%A92019%E5%B9%B42%E6%9C%8817%E5%8F%B7">第七十九天。2019年2月17号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%A4%A92019%E5%B9%B42%E6%9C%8818%E5%8F%B7">第八十天。2019年2月18号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%80%E5%A4%A92019%E5%B9%B42%E6%9C%8819%E5%8F%B7">第八十一天。2019年2月19号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%BA%8C%E5%A4%A92019%E5%B9%B42%E6%9C%8820%E5%8F%B7">第八十二天。2019年2月20号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%89%E5%A4%A92019%E5%B9%B42%E6%9C%8821%E5%8F%B7">第八十三天。2019年2月21号。</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%9B%9B%E5%A4%A92019%E5%B9%B42%E6%9C%8822%E5%8F%B7%E5%80%92%E6%95%B033%E5%A4%A9">第八十四天。2019年2月22号。（倒数33天）</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%BA%94%E5%A4%A92019%E5%B9%B42%E6%9C%8823%E5%8F%B7%E5%80%92%E6%95%B032%E5%A4%A9">第八十五天。2019年2月23号。（倒数32天）</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%85%AD%E5%A4%A92019%E5%B9%B42%E6%9C%8824%E5%8F%B7%E5%80%92%E6%95%B031%E5%A4%A9">第八十六天。2019年2月24号。（倒数31天）</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%83%E5%A4%A92019%E5%B9%B42%E6%9C%8825%E5%8F%B7%E5%80%92%E6%95%B030%E5%A4%A9">第八十七天。2019年2月25号。（倒数30天）</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%85%AB%E5%A4%A92019%E5%B9%B42%E6%9C%8826%E5%8F%B7%E5%80%92%E6%95%B029%E5%A4%A9">第八十八天。2019年2月26号。（倒数29天）</a></li>
+<li><a href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B9%9D%E5%A4%A92019%E5%B9%B42%E6%9C%8827%E5%8F%B7%E5%80%92%E6%95%B028%E5%A4%A9">第八十九天。2019年2月27号。（倒数28天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E5%A4%A92019%E5%B9%B42%E6%9C%8828%E5%8F%B7%E5%80%92%E6%95%B027%E5%A4%A9">第九十天。2019年2月28号。（倒数27天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%B8%80%E5%A4%A92019%E5%B9%B43%E6%9C%881%E5%8F%B7%E5%80%92%E6%95%B026%E5%A4%A9">第九十一天。2019年3月1号。（倒数26天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%BA%8C%E5%A4%A92019%E5%B9%B43%E6%9C%882%E5%8F%B7%E5%80%92%E6%95%B025%E5%A4%A9">第九十二天。2019年3月2号。（倒数25天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%B8%89%E5%A4%A92019%E5%B9%B43%E6%9C%883%E5%8F%B7%E5%80%92%E6%95%B024%E5%A4%A9">第九十三天。2019年3月3号。（倒数24天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E5%9B%9B%E5%A4%A92019%E5%B9%B43%E6%9C%884%E5%8F%B7%E5%80%92%E6%95%B023%E5%A4%A9">第九十四天。2019年3月4号。（倒数23天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%BA%94%E5%A4%A92019%E5%B9%B43%E6%9C%885%E5%8F%B7%E5%80%92%E6%95%B022%E5%A4%A9">第九十五天。2019年3月5号。（倒数22天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E5%85%AD%E5%A4%A92019%E5%B9%B43%E6%9C%886%E5%8F%B7%E5%80%92%E6%95%B021%E5%A4%A9">第九十六天。2019年3月6号。（倒数21天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%B8%83%E5%A4%A92019%E5%B9%B43%E6%9C%887%E5%8F%B7%E5%80%92%E6%95%B020%E5%A4%A9">第九十七天。2019年3月7号。（倒数20天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E5%85%AB%E5%A4%A92019%E5%B9%B43%E6%9C%888%E5%8F%B7%E5%80%92%E6%95%B019%E5%A4%A9">第九十八天。2019年3月8号。（倒数19天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%B9%9D%E5%A4%A92019%E4%BD%A03%E6%9C%889%E5%8F%B7%E5%80%92%E6%95%B018%E5%A4%A9">第九十九天。2019你3月9号。（倒数18天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E5%A4%A92019%E5%B9%B43%E6%9C%8810%E5%8F%B7%E5%80%92%E6%95%B017%E5%A4%A9">第一百天。2019年3月10号。（倒数17天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E9%9B%B6%E4%B8%80%E5%A4%A92019%E5%B9%B43%E6%9C%8811%E5%8F%B7%E5%80%92%E6%95%B016%E5%A4%A9">第一百零一天。2019年3月11号。（倒数16天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E9%9B%B6%E4%BA%8C%E5%A4%A92019%E5%B9%B43%E6%9C%8812%E5%8F%B7%E5%80%92%E6%95%B015%E5%A4%A9">第一百零二天。2019年3月12号。（倒数15天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E9%9B%B6%E4%B8%89%E5%A4%A92019%E5%B9%B43%E6%9C%8813%E5%8F%B7%E5%80%92%E6%95%B014%E5%A4%A9">第一百零三天。2019年3月13号。（倒数14天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E9%9B%B6%E5%9B%9B%E5%A4%A92019%E5%B9%B43%E6%9C%8814%E5%8F%B7%E5%80%92%E6%95%B013%E5%A4%A9">第一百零四天。2019年3月14号。（倒数13天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E9%9B%B6%E4%BA%94%E5%A4%A92019%E5%B9%B43%E6%9C%8815%E5%8F%B7%E5%80%92%E6%95%B012%E5%A4%A9">第一百零五天。2019年3月15号。（倒数12天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E9%9B%B6%E5%85%AD%E5%A4%A92019%E5%B9%B43%E6%9C%8816%E5%8F%B7%E5%80%92%E6%95%B011%E5%A4%A9">第一百零六天。2019年3月16号。（倒数11天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E9%9B%B6%E4%B8%83%E5%A4%A92019%E5%B9%B43%E6%9C%8817%E5%8F%B7%E5%80%92%E6%95%B010%E5%A4%A9">第一百零七天。2019年3月17号。（倒数10天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E9%9B%B6%E5%85%AB%E5%A4%A92019%E5%B9%B43%E6%9C%8818%E5%8F%B7%E5%80%92%E6%95%B09%E5%A4%A9">第一百零八天。2019年3月18号。（倒数9天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E9%9B%B6%E4%B9%9D%E5%A4%A92019%E5%B9%B43%E6%9C%8819%E5%8F%B7%E5%80%92%E6%95%B08%E5%A4%A9">第一百零九天。2019年3月19号。（倒数8天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E4%B8%80%E5%8D%81%E5%A4%A92019%E5%B9%B43%E6%9C%8820%E5%8F%B7%E5%80%92%E6%95%B07%E5%A4%A9">第一百一十天。2019年3月20号。（倒数7天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E4%B8%80%E5%8D%81%E4%B8%80%E5%A4%A92019%E5%B9%B43%E6%9C%8821%E5%8F%B7%E5%80%92%E6%95%B04%E5%A4%A9">第一百一十一天。2019年3月21号。（倒数4天）</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E7%99%BE%E4%B8%80%E5%8D%81%E4%BA%8C%E5%A4%A92019%E5%B9%B43%E6%9C%8822%E5%8F%B7%E5%80%92%E6%95%B0%E7%AC%AC3%E5%A4%A9">第一百一十二天。2019年3月22号。（倒数第3天）</a></li>
+<li><a href="#2019%E5%B9%B43%E6%9C%8823%E5%8F%B7%E5%80%92%E6%95%B0%E7%AC%AC2%E5%A4%A9">2019年3月23号。（倒数第2天）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="前言"><a class="header" href="#前言">前言</a></h1>
+<p>新的“十里坡剑神”（知乎用户每一天欢乐）是我所见过的最具毅力的人。他的决心和韧性令人钦佩，展示了坚持不懈的力量。与许多人出于谨慎口出“这不可能”的悲观态度不同，我对这件事始终保持着谨慎而坚定的信念。我深信，他将会取得最终的成功。正是他的毅力和不屈的精神不断激励着我，鼓舞着我在追求自己的目标时不断前行。</p>
+<h1 id="十里坡剑神是什么梗"><a class="header" href="#十里坡剑神是什么梗">十里坡剑神是什么梗?</a></h1>
+<p><strong>Author:</strong> [VincentCM1848]</p>
+<p><strong>Link:</strong> <a href="https://www.zhihu.com/question/584711633/answer/2901501422">https://www.zhihu.com/question/584711633/answer/2901501422</a></p>
+<p>出自初代《仙剑奇侠传》。</p>
+<p>2005年底，有个台湾玩家（ID：bill7437）在Ptt（批踢踢實業坊，一个现在以著名深绿立场以及DOS风格界面而为大陆网民所熟悉的论坛）分享他的一个让人啼笑皆非的故事：在游戏开局后因为卡关（本人并没有意识到卡关）而在一个名为“十里坡”的新手级地图里光靠杀很低级的怪物，最终练级练到71级……</p>
+<p><img src="https://pica.zhimg.com/50/v2-022f5aad2e35b4f06a2c98f147e1132a_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>由于李逍遥的最强战斗技能“剑神”34级即可学到，所以网友们对这位玩家的毅力及无聊程度给予了极高的评价（也不知道是在夸他还是在骂他），并且也有了“十里坡剑神”这个称号。</p>
+<p>当然，后来知乎上有人考据过，说这个事儿里事主有夸大嫌疑。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/54740279">X.Y：理性分析仙剑“十里坡剑神”事件可信度！</a></p>
+<p>关于这个事儿还有后续：</p>
+<p>第一，官方将此事作为一个彩蛋放进了《仙剑奇侠传5前传》里。</p>
+<p>第二，就发生在知乎。2018年知乎有人提问：</p>
+<p><a href="https://www.zhihu.com/question/302473183">《仙剑奇侠传1》十里坡练成剑神的传说到底是不是真的？</a></p>
+<p><a href="https://www.zhihu.com/people/89e659a946bb05a3202d920d90e88372">答主</a> 表示：</p>
+<blockquote>
+<p>直接做个测试，不就知道是不是真的了？ 原高赞答案说只要半年每天4.6小时。</p>
+</blockquote>
+<p>于是他就真的动手去测试了……</p>
+<p><a href="https://www.zhihu.com/question/302473183/answer/542242251">《仙剑奇侠传1》十里坡练成剑神的传说到底是不是真的？</a></p>
+<p>最后他真的在十里坡肝了114天并超过了当年bill7437的71级（最终结束时72级），亲手证明了“十里坡剑神”的可能性。</p>
+<h1 id="仙剑奇侠传1十里坡练成剑神的传说到底是不是真的"><a class="header" href="#仙剑奇侠传1十里坡练成剑神的传说到底是不是真的">《仙剑奇侠传1》十里坡练成剑神的传说到底是不是真的？</a></h1>
+<p><strong>Author:</strong> [每一天欢乐]</p>
+<p><strong>Link:</strong> <a href="https://www.zhihu.com/question/302473183/answer/542242251">https://www.zhihu.com/question/302473183/answer/542242251</a></p>
+<p>（<em><strong>超长文预警。1w+文字，200+图片，多个视频，多个链接。预计阅读时间1h＋</strong></em>）</p>
+<blockquote>
+<p>目录 事件简述 事件总结 相关文章链接整理 相关视频及链接 证明过程（每日的更新进度）</p>
+</blockquote>
+<h2 id="事件简述"><a class="header" href="#事件简述">事件简述</a></h2>
+<p>直接做个测试，不就知道是不是真的了？</p>
+<p>原高赞答案说只要半年每天4.6小时。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-cb72bef1bfba674edcc91868539f03de_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>我计算了一下。830个小时，要是每天打12个小时，就是69天，每天打8个小时就是104天。如果一天24个小时，就是35天。大概三个月左右就可以完成。</p>
+<p>最近感觉自己的生活少了什么，想去做一些做不到的事情来激励自己。</p>
+<p>游戏已经下好了，95版，解压后25.6MB。</p>
+<p><img src="https://picx.zhimg.com/50/v2-9313fa360fab28882d72080913f4b775_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>每升一级，我截一张图，看看在三个月/四个月内可不可以完成这次挑战。</p>
+<p>如果最后时间超过半年，就算我失败。</p>
+<p>( ͡° ͜ʖ ͡°)✧</p>
+<h2 id="事件总结"><a class="header" href="#事件总结">事件总结</a></h2>
+<p>2019年3月24号。属于我的十里坡之旅结束了。</p>
+<p><img src="https://picx.zhimg.com/50/v2-1d67896158c84adefd46452257317898_720w.jpg?source=2c26e567" alt="李逍遥升到72级" /><img src="https://picx.zhimg.com/50/v2-9f6072f2a44b1b94385d1b7095e6e115_720w.jpg?source=2c26e567" alt="灵儿升到32级" /></p>
+<p>我的本意是测试这件事情的真假。现在我该给出最后一个答案了。</p>
+<p>我认为台湾省的十里坡剑神是假的。但是十里坡剑神是真的存在的，十里坡剑神的精神是真实存在的。</p>
+<p>关于台湾省的十里坡剑神之所以是假的，其他大佬已经说过了，我就不多说了。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/54740279">https://zhuanlan.zhihu.com/p/54740279</a></p>
+<p>台湾省的十里坡剑神是假的，那我为什么说十里坡剑神是真的呢？一部分原因是因为我变成了十里坡剑神。而最重要的原因是，世界上有很多人都曾经是十里坡剑神！</p>
+<p>世界上的十里坡剑神何止我一位！</p>
+<p>有多少玩家一次又一次练级，就是为了去阻止石长老带走灵儿。</p>
+<p>有多少玩家在一个地图中，反复徘徊了好多年。</p>
+<p>有多少玩家在没有攻略的情况下，完成了一次又一次的奇迹操作。</p>
+<p>关于十里坡剑神问题下，就有不少这样的玩家。还有更多的玩家完成了壮举，却没有发言。</p>
+<p>十里坡不止是仙剑奇侠传的十里坡，还可能是梦幻西游的小渔村，还可能是魔兽世界的副本。十里坡是那些地方的一个小小缩影。</p>
+<p>十里坡也不止在游戏中，也在很多人的人生中。很多人以不断重复的简单操作，完成了不可思议的作品。</p>
+<p>在我的评论区中，就有那么一位用了三年时间完成十里坡剑神的人。</p>
+<p>我相信，还有更多更多的十里坡剑神存在过。或许有的人，他也曾经创造奇迹，只是没有人见证。</p>
+<p>而我有幸能在大家的见证下，完成这件小事。</p>
+<p>这只是一件小事。这四个月也不过人生的1％。但是，如果我的一生都能像在十里坡一样，付出所有努力去实现自己的梦想，那就一定可以实现。</p>
+<p>我喜欢动画，我就学了动画。我希望我以后的人生能像这四个月一样，不断奋斗，然后练出我人生的剑神。</p>
+<p>不仅是我，也是很多人。相信自己走的路，然后付出努力，就能在现实中成为十里坡剑神。</p>
+<p>只要相信，人人都可以是十里坡剑神。不仅是游戏的十里坡剑神，还是人生的十里坡剑神。</p>
+<p>加油( ͡° ͜ʖ ͡°)✧。</p>
+<p>游戏的十里坡之旅结束了。</p>
+<p>人生的十里坡之旅才刚刚开始。</p>
+<p><img src="https://picx.zhimg.com/50/v2-b429823d9e89e773702e4ca1e6d3d043_720w.jpg?source=2c26e567" alt="十里坡剑神奖杯" /></p>
+<h2 id="相关链接整理"><a class="header" href="#相关链接整理">相关链接整理</a></h2>
+<p>官方回应：<a href="https://www.zhihu.com/question/302473183/answer/632205205">https://www.zhihu.com/question/302473183/answer/632205205</a></p>
+<p>触乐网的文章：<a href="https://zhuanlan.zhihu.com/p/60354131">https://zhuanlan.zhihu.com/p/60354131</a></p>
+<p>应对可能的质疑，我做的关于技术的总结:<a href="https://zhuanlan.zhihu.com/p/60174014">https://zhuanlan.zhihu.com/p/60174014</a></p>
+<p>《仙剑奇侠传1》的游戏链接：<a href="https://store.cubejoy.com/html/en/store/goodsdetail/detail79.html">https://store.cubejoy.com/html/en/store/goodsdetail/detail79.html</a></p>
+<p>关于真假的资料：<a href="https://zhuanlan.zhihu.com/p/54740279">https://zhuanlan.zhihu.com/p/54740279</a></p>
+<h2 id="相关视频及链接"><a class="header" href="#相关视频及链接">相关视频及链接</a></h2>
+<p><a href="https://www.zhihu.com/video/1100378194812776448">https://www.zhihu.com/video/1100378194812776448</a><a href="https://www.zhihu.com/video/1100375866655293440">https://www.zhihu.com/video/1100375866655293440</a><a href="https://www.zhihu.com/video/1100378411129757696">https://www.zhihu.com/video/1100378411129757696</a></p>
+<p>升到36级的视频：<a href="http://www.bilibili.com/video/av38302205?share_medium=android&amp;share_source=copy_link&amp;bbid=EB7F8573-98D0-4C59-942B-B4930206670F20793infoc&amp;ts=1544971413345">http://www.bilibili.com/video/av38302205?share_medium=android&amp;share_source=copy_link&amp;bbid=EB7F8573-98D0-4C59-942B-B4930206670F20793infoc&amp;ts=1544971413345</a>（90分钟左右）</p>
+<p>升到50级的视频：<a href="http://www.bilibili.com/video/av40540852?share_medium=android&amp;share_source=copy_link&amp;bbid=EB7F8573-98D0-4C59-942B-B4930206670F20793infoc&amp;ts=1547726430621">http://www.bilibili.com/video/av40540852?share_medium=android&amp;share_source=copy_link&amp;bbid=EB7F8573-98D0-4C59-942B-B4930206670F20793infoc&amp;ts=1547726430621</a> 打苗人的视频：<a href="http://www.bilibili.com/video/av46416090?share_medium=android&amp;share_source=copy_link&amp;bbid=EB7F8573-98D0-4C59-942B-B4930206670F20793infoc&amp;ts=1552716919435">http://www.bilibili.com/video/av46416090?share_medium=android&amp;share_source=copy_link&amp;bbid=EB7F8573-98D0-4C59-942B-B4930206670F20793infoc&amp;ts=1552716919435</a></p>
+<p>达成视频及刷怪方法：<a href="https://www.bilibili.com/video/av47219413/">https://www.bilibili.com/video/av47219413/</a></p>
+<p>奖杯视频：<a href="https://www.bilibili.com/video/av47476572/">https://www.bilibili.com/video/av47476572/</a></p>
+<p>最后的隐藏结局：<a href="https://www.bilibili.com/video/av48989777/">https://www.bilibili.com/video/av48989777/</a></p>
+<h2 id="证明过程每日的进度"><a class="header" href="#证明过程每日的进度">证明过程（每日的进度）</a></h2>
+<p>（<em><strong>超长文，多图</strong></em>）</p>
+<h3 id="第一天11月30号"><a class="header" href="#第一天11月30号">第一天，11月30号。</a></h3>
+<p>我先去仙灵岛做剧情。</p>
+<p><img src="https://pica.zhimg.com/50/v2-a18a8c95e5754e0b8a2298a22cc84589_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://picx.zhimg.com/50/v2-59d84a534efdbb0e3cbf4f671273931a_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>回来的路上，升到了二级。</p>
+<p><img src="https://picx.zhimg.com/50/v2-1bc732a846b62decb1f7f6a8bf1a6ca9_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>然后去破庙学剑。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-7d61d3d315ff0699697ac26efba5e12e_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>去破庙路上升到了3级。</p>
+<p><img src="https://pica.zhimg.com/50/v2-92ba84eefc1623b9d24f51477939951d_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>酒剑仙走了之后，我直接去十里坡练级，连客栈都不回了。后面的剧情，我一点都没动。</p>
+<p>然后就是一直打怪升级。</p>
+<p><img src="https://picx.zhimg.com/50/v2-0f6ba7723b989af9d39ce25a316a2b99_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://pica.zhimg.com/50/v2-1c4887a54a2168a28a95f7fe8f9c53c0_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://pic1.zhimg.com/50/v2-a8925c74c4c2e941ed1f38e670c77915_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://picx.zhimg.com/50/v2-68f2e66de70562838c35891ca12751f3_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://picx.zhimg.com/50/v2-83a94c1815380410cd5dd876a7e2796a_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://picx.zhimg.com/50/v2-fd340db5eed913e2cd4627f9cda9454d_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://pic1.zhimg.com/50/v2-d0cd6a243bda638d20be68ca9408099c_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>这是升10级的那张，截的时候刚好获得一个蜂巢，给挡住了。</p>
+<p><img src="https://pica.zhimg.com/50/v2-3398f486f3bb7611e80400a88b4c261b_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>本来打算是都截升级那个界面的，有几次打蒙了，后来截的等级面板。</p>
+<p><img src="https://pica.zhimg.com/50/v2-6957fd5545d6009b72eae79c12e9b12b_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>和第一级升级，需要的经验增长了九十多倍。</p>
+<h3 id="第二天12月1号"><a class="header" href="#第二天12月1号">第二天，12月1号。</a></h3>
+<p>继续昨天的刷怪。</p>
+<p><img src="https://picx.zhimg.com/50/v2-42e67969723e63511cbbdec64c208668_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://pic1.zhimg.com/50/v2-06e4b5cf3027d134e2164e417aeb7ce1_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://picx.zhimg.com/50/v2-919a7bdf28f65110fa970c3bdd55307a_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://pic1.zhimg.com/50/v2-fcb5026c0acf221af39f69faa0d79656_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>不知道为什么，感觉掉的东西有点多了。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-f70619a4bf6884d588f5a4f4802a99f0_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>学会了万剑诀，刷怪快了不少。现在升一级要三千多经验。</p>
+<p><img src="https://pica.zhimg.com/50/v2-c91fdf24d07827dc0e50052ccf9d2846_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>比较难受的是，现在蜂巢和止血草已经到上限了，自己用不上，又卖不出去。</p>
+<p>按进度来说，应该已经完成了1％。</p>
+<p><a href="https://www.zhihu.com/people/a860aa444a6f3a14997f4cf64e1f393f">https://www.zhihu.com/people/a860aa444a6f3a14997f4cf64e1f393f</a> 谢谢这位大佬给了自己很多建议。</p>
+<p>( ͡° ͜ʖ ͡°)✧继续努力</p>
+<h3 id="第三天12月2号"><a class="header" href="#第三天12月2号">第三天，12月2号。</a></h3>
+<p>继续刷怪。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-afa9256f622075d7ead1d0e10cb1d02d_720w.jpg?source=2c26e567" alt="Image" /><img src="https://pic1.zhimg.com/50/v2-16f3ac402931db2e0befb9d1983767bb_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>截这张的时候，升级图快消失了，幸好自己手快。</p>
+<p><img src="https://picx.zhimg.com/50/v2-33d8d40396addfec6954f6b8d07ec857_720w.jpg?source=2c26e567" alt="Image" /><img src="https://picx.zhimg.com/50/v2-07a9d99fbfa5f2f12e074e9a4080f40f_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>蜂王蜜已经99个了，到达上限了。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-d5ede9884d8f944372aabf389d4e2a5d_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升一级要快5k的经验。</p>
+<p>明天开始上课，升级的速度会慢下来。</p>
+<h3 id="第四天12月3号"><a class="header" href="#第四天12月3号">第四天，12月3号。</a></h3>
+<p>继续刷怪。</p>
+<p><img src="https://pica.zhimg.com/50/v2-d105c7d4af36c77ffa751dd42c04faa2_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>早上刚睡醒，截的时候忘了开截图工具了，截的等级图。</p>
+<p><img src="https://picx.zhimg.com/50/v2-4564013fc525c34f23893fd532a7da8c_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://pica.zhimg.com/50/v2-f49cb1b38512522d179a37f1ac794bd5_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升一级要6k多。</p>
+<p>今天我才知道还有快捷键这东西，速度一下子快了不少。刷一组能快1s左右，清全场怪能快10s左右，我估算了一下，最后能比原来快七八个小时。</p>
+<h3 id="第五天12月4号"><a class="header" href="#第五天12月4号">第五天，12月4号。</a></h3>
+<p>还是刷怪。</p>
+<p><img src="https://picx.zhimg.com/50/v2-c5f783ffd71b12eb889c986f484041fa_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://picx.zhimg.com/50/v2-c3110a850f4fc2d9fff2d2eb87acb695_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>这是24升25的，截的时候正好是图快消失的时候。仔细看，还是能看出来的。算一下时间，升这一级用了6个多小时。。。可怕。。。</p>
+<p><img src="https://picx.zhimg.com/50/v2-3649092b20e47f5f7bacf2e993d30399_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升一级要7.5k左右，需要的经验越来越多了。感觉自己现在像一个机器人，不断重复同样的事情。</p>
+<h3 id="第六天12月5号"><a class="header" href="#第六天12月5号">第六天，12月5号。</a></h3>
+<p>依旧刷怪。</p>
+<p><img src="https://picx.zhimg.com/50/v2-f83116dffb6e7b879a064caeae59882d_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>今天一天就生了一级，估计以后几天都差不多。</p>
+<p><img src="https://picx.zhimg.com/50/v2-b2cc4ab256046ea38a175aaa8c016c9d_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>突然自己不知道什么时候学了天剑，光顾截图了，没看技能。</p>
+<p><img src="https://pica.zhimg.com/50/v2-db1669e7eeb0cacfaba247b763f6a234_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升一级要8k多经验，本来想今天升两级，没来得及。</p>
+<h3 id="第七天12月6号"><a class="header" href="#第七天12月6号">第七天，12月6号。</a></h3>
+<p>还是刷怪。</p>
+<p><img src="https://picx.zhimg.com/50/v2-cbeb2eb290de0a8eae326b0e5b455d94_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://pica.zhimg.com/50/v2-560e19b61c075e8e038cf3d8b398f37d_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>突然发现，现在已经有十万多的钱了。我一直以为9万多是上限呢，没想到还可以增加。</p>
+<p><img src="https://pica.zhimg.com/50/v2-3b42e8959d60823a6f016a6d9520afd2_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升一级要9k多，估计明天就要上万了。今天应该是最后一次可以一天升两级，以后都是一天一级，或者几天一级。</p>
+<h3 id="第八天12月7号"><a class="header" href="#第八天12月7号">第八天。12月7号。</a></h3>
+<p>刷怪。。。</p>
+<p><img src="https://pica.zhimg.com/50/v2-0e8f6fdff5a22c869008bacb1226bedd_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>一级经验突破10k了。照这个速度下去，下个星期这个时候应该可以突破36级，学会“剑神”，但是距离十里坡剑神还有很长的距离。</p>
+<h3 id="第九天12月8号"><a class="header" href="#第九天12月8号">第九天。12月8号。</a></h3>
+<p>刷怪。。。</p>
+<p><img src="https://picx.zhimg.com/50/v2-ec1827a17eff30b692823b0096f1d367_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>今天升了一级，今天30级了。截图慢了，只能截等级图了。</p>
+<p><img src="https://pica.zhimg.com/50/v2-be27800dcdede541bf975452d3937b19_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>看攻略才知道，这里还有东西。</p>
+<p>看攻略才想起来还有铁匠铺，换了一套新装备。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-ec1827a17eff30b692823b0096f1d367_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>换了新装备，现在升一级要10k＋。</p>
+<h3 id="第十天12月9号"><a class="header" href="#第十天12月9号">第十天。12月9号。</a></h3>
+<p>。。。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-d6b213832e27294bebfafb1a20f98484_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>一万一经验了。</p>
+<h3 id="第十一天12月10号"><a class="header" href="#第十一天12月10号">第十一天。12月10号。</a></h3>
+<p>升级的时候，按截图键，截图界面没弹出。截的等级图。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-15e7e1b579ee76cf3f1f7e1a743adda6_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在是32级，升级经验是一万二了。转眼间，已经是六百的体力了。平A还是没有万剑诀的伤害高。继续。。。</p>
+<h3 id="第十二天12月11号"><a class="header" href="#第十二天12月11号">第十二天。12月11号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-579a542fbf58450c1ef260abd6f332b2_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>今天做PPT，耽误了一会。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-f3f92284a620278d6f56c4964db3c004_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>突然发现，存档的数字就是存档次数。进度五是15级的存档，进度四是30级的存档。进度三是我现在用的，估计在四十五级后用进度二。</p>
+<p>现在升一级经验是一万三。明天可能升不了一级了，明天课比较多。</p>
+<h3 id="第十三天12月12号"><a class="header" href="#第十三天12月12号">第十三天。12月12号。</a></h3>
+<p>今天没升级。</p>
+<p>今天一天的经验是一万二，差了升级经验一千。</p>
+<p>有人问那个苗刀。去仙灵岛的时候，我忘记拿了，不过也没什么影响。</p>
+<p>等星期六的时候，我打算录一次刷怪视频。录完我会上传b站，可以去看看。视频我估计就两三个小时，就是一直刷怪，也没什么</p>
+<h3 id="第十四天12月13号"><a class="header" href="#第十四天12月13号">第十四天。12月13号。</a></h3>
+<p>升级了。现在一级经验是一万四。</p>
+<p>今天我卡了一下经验。</p>
+<p>这样子等到星期六录屏的时候，刚好能录到升到36级的图。升到36级，就学会了技能“剑神”，但是距离目标71级，还有很远的距离。</p>
+<p>等后天，也就能证明“十里坡剑神是升到36级”是假的。按照我的速度是十六天36级，哪怕速度比我慢一倍，也不可能用半年，最多一个月多。</p>
+<p>( ͡° ͜ʖ ͡°)✧如果我挑战成功，不论原来的十里坡剑神是真是假，现在的十里坡确实有剑神诞生。</p>
+<h3 id="特殊事件"><a class="header" href="#特殊事件">特殊事件</a></h3>
+<p>ಠ_ಠ 刚刚去上厕所的时候，不小心把游戏关了。前面没有存档。回档到刚升级那会了，相当于今天的两个小时和昨天的八个小时白打了。</p>
+<p>。。。</p>
+<p>现在凌晨两点多，看着空的经验条。难受啊！</p>
+<p>(⋟﹏⋞)</p>
+<p>╮(‵▽′)╭算了，存档还在，没什么大不了的。</p>
+<h3 id="第十五天12月14号"><a class="header" href="#第十五天12月14号">第十五天。12月14号。</a></h3>
+<p>本来已经打一万多经验了。存档的时候，点错了，点成读档了。没进步，反而倒退了。</p>
+<p>好像发了点低烧，现在头有点晕。</p>
+<p>计算来说，四个月内一定能完成，挑战期限是半年。休息半天应该没事。</p>
+<p>( ͡° ͜ʖ ͡°)✧这才第三周第一天，时间还长着呢。没事。</p>
+<h3 id="第十六天12月15号"><a class="header" href="#第十六天12月15号">第十六天。12月15号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-f445dfac4c430c3fe98ea2c3978b9422_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>35级，明天36级。</p>
+<p>吉运100了。</p>
+<p>明天中午把升36级的最后两个小时录屏，上传b站。b站一过审，我就更新。以后更新时间就改成中午十二点更新。</p>
+<p>36级练出“剑神”技能，算是十里坡小剑神。等71级才是真正的十里坡剑神。</p>
+<p>( ͡° ͜ʖ ͡°)✧继续。</p>
+<h3 id="第十七天12月16号"><a class="header" href="#第十七天12月16号">第十七天。12月16号。</a></h3>
+<p>36级，学会“剑神”。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-d9cc61a25f5bdbc7078507a0fe22fb34_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>用剑神打蜜蜂л̵ʱªʱªʱª (ᕑᗢᓫา∗)˒</p>
+<p>现在升一级快一万六的经验。</p>
+<p>升36级的视频，已经投B站了。现在正在审核。明天应该可以审核好。等明天审核好了，再上链接。</p>
+<p>(‵▽′)/继续，向着71级。</p>
+<h3 id="第十八天12月17号"><a class="header" href="#第十八天12月17号">第十八天。12月17号。</a></h3>
+<p>以后中午十二点左右更新。</p>
+<p>还差一点升级。</p>
+<h3 id="第十九天12月18号"><a class="header" href="#第十九天12月18号">第十九天。12月18号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-c66284c740aaf9b38fc18099f1723ca1_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升一级一万六的经验。</p>
+<h3 id="第二十天12月19号"><a class="header" href="#第二十天12月19号">第二十天。12月19号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-4722f3d23a73f321dd1063f5485d66ef_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>恍惚了一下，没截上。</p>
+<p>现在是一万七的经验</p>
+<h3 id="第二十一天12月20号"><a class="header" href="#第二十一天12月20号">第二十一天。12月20号。</a></h3>
+<p>今天没有升级。快要考试了，要写报告，有点忙。过了这阵子，等放假，就该升级快了。</p>
+<h3 id="第二十二天12月21号"><a class="header" href="#第二十二天12月21号">第二十二天。12月21号。</a></h3>
+<p>升到39级，体力超过七百。</p>
+<p>现在经验要一万八。</p>
+<p>感谢知友提醒。昨天的日期是20号，写成19号了。现在已经改正。</p>
+<h3 id="第二十三天12月22号"><a class="header" href="#第二十三天12月22号">第二十三天。12月22号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-09b2470657d2bb85d92c8812e942861e_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>下一周就要考试了。</p>
+<p>╮(￣⊿￣)╭虽然是大学生，也不可能天天玩。考试还是要努力一下的。</p>
+<p>慢慢来。</p>
+<h3 id="第二十四天12月23号"><a class="header" href="#第二十四天12月23号">第二十四天。12月23号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-73d6d16fe6ead0066c2a1ad7029837f1_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升到四十级了。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-15048773cecd7aad9c664101ac5392f7_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升一级一万九经验。</p>
+<h3 id="第二十五天12月24号"><a class="header" href="#第二十五天12月24号">第二十五天。12月24号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-f2ed4068d8f7ebd6659b7d6e68c4f69d_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在差不多两天升一级。今天没升级。</p>
+<p>距离七十一级还有三十一级。下面按照升一级三天来算，完成应该要用三个月。那么按进度来说，到今天应该完成了四分之一。</p>
+<p>今天晚上是平安夜，提前祝大家圣诞快乐！</p>
+<p>别人在外面炮火连天，我在十里坡刷怪。</p>
+<p>´_&gt;`有点惨。</p>
+<h3 id="第二十六天12月25号"><a class="header" href="#第二十六天12月25号">第二十六天。12月25号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-a377541b02537c06b0f41bc7fdbe4f9f_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升到四十一级。</p>
+<p><img src="https://pica.zhimg.com/50/v2-7ff599b74c89816646473c4dc26671e6_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在是两万经验。</p>
+<p>圣诞快乐！</p>
+<h3 id="第二十七天12月26号"><a class="header" href="#第二十七天12月26号">第二十七天。12月26号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-fbf42e959c3776770bc3fc352ae09992_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>继续。</p>
+<h3 id="第二十八天12月27号"><a class="header" href="#第二十八天12月27号">第二十八天。12月27号。</a></h3>
+<p>升级了。</p>
+<p><img src="https://pica.zhimg.com/50/v2-213449e56791371c1fe27a12e8c22a60_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在是两万一的经验。</p>
+<p>下午考试，希望能考个好成绩。</p>
+<p>继续努力。</p>
+<h3 id="第二十九天12月28号"><a class="header" href="#第二十九天12月28号">第二十九天。12月28号。</a></h3>
+<p>今天去摄影采风，暂不更新。</p>
+<h3 id="第三十天12月29号"><a class="header" href="#第三十天12月29号">第三十天。12月29号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-8f8d0c1ee17882339090b6716cb265f0_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>采风回来了。</p>
+<p>继续努力。</p>
+<h3 id="第三十一天12月30号"><a class="header" href="#第三十一天12月30号">第三十一天。12月30号。</a></h3>
+<p>快升级了。</p>
+<h3 id="第三十二天12月31号"><a class="header" href="#第三十二天12月31号">第三十二天。12月31号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-6d64c89a6df57bede189824646188d46_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升级了。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-66dbba67da6636f2a2a095ff7dbee9ba_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升级经验是二万二。</p>
+<p>到今天，在十里坡已经一个月了。做一个简单的总结。</p>
+<p>一个月升了43级，一天大约升1.4级。杀了多少怪，我也记不清了。</p>
+<p>继续。</p>
+<h3 id="第三十三天2019年1月1号"><a class="header" href="#第三十三天2019年1月1号">第三十三天。2019年1月1号。</a></h3>
+<p>新年快乐！</p>
+<p>升到44级了。</p>
+<p>钱现在有快四十万，我去镇上把钱花了。</p>
+<p><img src="https://pica.zhimg.com/50/v2-afe5e6c56f408e2a8c9bf318d539737b_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>去药铺把能买的药，全部买光。钱还没花完 还剩两万多。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-3a1e20a73764cb6d2f9a77eb5ec5d8ca_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>还有钱，继续去买水果。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-e164eedac65e07f21c00db33e496dcc1_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>把水果买完。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-9b087ef72df65666d1cdc1ba5da35346_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>回一趟客栈看看￣ ￣)σ，有种恍如隔年的感觉。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-05df3ac745da7ea9875081a882ddec9e_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>截了一张有趣的图。2222222。。。。。</p>
+<p><img src="https://pica.zhimg.com/50/v2-361f672b6555d9629a331fa3fa6b3a51_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升一级是两万三。继续。</p>
+<h3 id="第三十四天2019年1月2号"><a class="header" href="#第三十四天2019年1月2号">第三十四天。2019年1月2号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-6eb31ea1578060226315a098f4382c36_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>昨天打了一万五的经验。继续。</p>
+<h3 id="第三十五天2019年1月3号"><a class="header" href="#第三十五天2019年1月3号">第三十五天。2019年1月3号。</a></h3>
+<p>升到四十五级。</p>
+<p><img src="https://pica.zhimg.com/50/v2-e5e315e92f149e25daf5e62c11b84362_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>开始用进度二存档。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-bd5cfd8f21cf3ff0274222f85d8b910d_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升一级快两万五。</p>
+<p>┑(￣Д ￣)┍</p>
+<h3 id="第三十六天2019年1月4号"><a class="header" href="#第三十六天2019年1月4号">第三十六天。2019年1月4号。</a></h3>
+<p>继续。</p>
+<h3 id="第三十七天2019年1月5号"><a class="header" href="#第三十七天2019年1月5号">第三十七天。2019年1月5号。</a></h3>
+<p>升级了。体力突破八百了。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-42d2e5be8dd780fa6b22540e562ab6dc_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>大部分时候，自己都是这样的。等怪的时候码字，怪出来了再打。或者一边看电影，一边十里坡刷怪。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-c8611949b005d80798cb870d4695b76a_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在升一级快两万六。武力是250。。。。</p>
+<h3 id="第三十八天2019年1月6号"><a class="header" href="#第三十八天2019年1月6号">第三十八天。2019年1月6号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-8fa8bebe68204a4d8bc24686e2fe2def_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>看图说话。</p>
+<h3 id="第三十九天2019年1月7号"><a class="header" href="#第三十九天2019年1月7号">第三十九天。2019年1月7号。</a></h3>
+<p>升级了。</p>
+<p>现在升一级是两万七。</p>
+<h3 id="第四十天2019年1月8号"><a class="header" href="#第四十天2019年1月8号">第四十天。2019年1月8号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-c9dd789a69acc69fa524e22eec2db081_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>今天比较忙。既要考试又要打印报告，经验比较少。</p>
+<p>转眼都四十天了。继续。</p>
+<h3 id="第四十一天2019年1月9号"><a class="header" href="#第四十一天2019年1月9号">第四十一天。2019年1月9号。</a></h3>
+<p>升级了。昨天一天猛肝了一万七的经验，硬是升级了。</p>
+<p>现在升一级是两万八。等再升三级，到51级，就应该是固定31000的经验了。</p>
+<p>距离71级，还差23级。两天升一级是46天，三天升一级是69天。</p>
+<p>先定个小目标，在2月28号之前练到71级。</p>
+<p>( ͡° ͜ʖ ͡°)✧继续。</p>
+<h3 id="第四十二天2019年1月10号"><a class="header" href="#第四十二天2019年1月10号">第四十二天。2019年1月10号。</a></h3>
+<p>比昨天少了一点经验。</p>
+<p>14号放假，应该能在放假前升到50级。</p>
+<h3 id="第四十三天2019年1月11号"><a class="header" href="#第四十三天2019年1月11号">第四十三天。2019年1月11号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-dbfb9fb5b6929117665a0fac49d60c3e_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升到49级，真气破七百。等71级，应该体力和真气都破1000吧。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-393ee471c01fe2860653ddc631f457f7_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>放假前应该能50级。</p>
+<h3 id="第四十四天2019年1月12号"><a class="header" href="#第四十四天2019年1月12号">第四十四天。2019年1月12号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-ce784af3d9c777c23adaca6732446f36_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升级了。</p>
+<p>(◦˙▽˙◦)说了可能没人信，我一天肝了二十多个小时。本来是打算肝到两点就睡的。</p>
+<p>晚上一点多的时候，我是右手刷剑神，左手玩手机。然后上B站的时候，发现B站上架了《教父》电影，就去看了一会。没想到特别好看，就看完了。不过瘾，就又跑爱奇艺看了《教父2》。两个网站都买了会员，还是挺好的。</p>
+<p>等我看完《教父2》，已经早上九点多了。跑出去吃了个早饭。回来打算睡一会，我又想到还有《教父3》，然后又看《教父3》。我就一边十里坡刷怪，一边看《教父》。感觉身体就是自动运作，一边看一边刷。</p>
+<p>上次像这次这么认真，还是初中的时候吧。</p>
+<p>上次升36级的录屏太长了，这次录了一个短的。</p>
+<p>现在经验是三万。</p>
+<p>("▔□▔)真没想到自己能走到这一步。继续努力。</p>
+<h3 id="第四十五天2019年1月13号"><a class="header" href="#第四十五天2019年1月13号">第四十五天。2019年1月13号。</a></h3>
+<p>今天要收拾东西准备放假，事情比较多。暂时不更新。</p>
+<h3 id="第四十六天2019年1月14号"><a class="header" href="#第四十六天2019年1月14号">第四十六天。2019年1月14号。</a></h3>
+<p>明天放假，我就回家了。因为我在外地上大学，需要坐半天火车才能回家。再加上转车，取车票，等火车，一天时间才能到家。明天也更不了。</p>
+<p>暂停两天，等我回家了，15号再恢复更新。</p>
+<h3 id="第四十七天2019年1月15号"><a class="header" href="#第四十七天2019年1月15号">第四十七天。2019年1月15号。</a></h3>
+<p>好了，现在可以上传图片了。</p>
+<p>昨天下午四五点到家。坐了一天车，晚上实在困得不行，早早地睡了。经验比较少，明天会多的。</p>
+<h3 id="第四十八天2019年1月16号"><a class="header" href="#第四十八天2019年1月16号">第四十八天。2019年1月16号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-aee6bb13ee327ef1a12d8ba59b165c1b_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>后面升级，估计都是三天一级了。</p>
+<p>(￢_￢)我现在要说，我以前几乎没玩过仙剑的游戏，你们会不会打我。。。</p>
+<p>我就玩过一次仙剑1，后来打不过boss，就没玩了。第一次玩的时候，好像连天剑都没有练出来。我就玩过那一次。</p>
+<p>刷十里坡剑神之前，我都不知道你们说“剑神”技能是什么。打了半个月，才发现还有聚怪和快捷键。前段时间，评论区有人说藤甲，我才知道还有藤甲可以拿。</p>
+<p>我就是看了其他大佬的答案，然后想试一试，就一直刷到了现在。</p>
+<p>(•́ω•̀ )我这就是，无知者无畏吧。。。</p>
+<h3 id="第四十九天2019年1月17号"><a class="header" href="#第四十九天2019年1月17号">第四十九天。2019年1月17号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-4339ead51000fca7182537a1e8e4cee2_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>快升级了。</p>
+<p>中午有点事，提前更新了。</p>
+<h3 id="第五十天2019年1月18号"><a class="header" href="#第五十天2019年1月18号">第五十天。2019年1月18号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-672d645438a0e98cdff130a49a259760_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升到51级了。</p>
+<p>升一级的经验是32000，到达上限了。距离上次升级，过了好长时间。</p>
+<p>就这样。</p>
+<h3 id="第五十一天2019年1月19号"><a class="header" href="#第五十一天2019年1月19号">第五十一天。2019年1月19号。</a></h3>
+<p><img src="https://picx.zhimg.com/50/v2-ec8a3c068970c57a97f76ff4d94ae146_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>明天升级。</p>
+<h3 id="第五十二天2019年1月20号"><a class="header" href="#第五十二天2019年1月20号">第五十二天。2019年1月20号。</a></h3>
+<p>升到52级了。明天还是52级，天数正好是52天。</p>
+<p>试了下平a，暴击能打八百多。剑神技能大约是五六百。好像还有一次平a打了一千五，也不知道怎么回事，也没来得及截图。</p>
+<p>现在打前期boss应该都能用平a过吧。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-a4831112937202bb6f3f1b714b0c10cb_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>(•́ω•̀ )评论区评论好多。。。</p>
+<h3 id="第五十三天2019年1月21号"><a class="header" href="#第五十三天2019年1月21号">第五十三天。2019年1月21号。</a></h3>
+<p>现在在高速路上，无法更新。</p>
+<h3 id="第五十四天2019年1月22号"><a class="header" href="#第五十四天2019年1月22号">第五十四天。2019年1月22号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-c1cda9663fff665dbd21db826c0d6bf9_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>忙了一天，刚刚赶上。</p>
+<h3 id="第五十五天2019年1月23号"><a class="header" href="#第五十五天2019年1月23号">第五十五天。2019年1月23号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-fe75585a36279c8de6f44253809cd90d_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>应该是明天升级。</p>
+<h3 id="第五十六天2019年1月24号"><a class="header" href="#第五十六天2019年1月24号">第五十六天。2019年1月24号。</a></h3>
+<p>升级。</p>
+<p>体力突破九百了。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-a9664e302b6697fda3249e0b8ac2795f_720w.jpg?source=2c26e567" alt="Image" />### 第五十七天。2019年1月25号。</p>
+<p>慢慢来。</p>
+<h3 id="第五十八天2019年1月26号"><a class="header" href="#第五十八天2019年1月26号">第五十八天。2019年1月26号。</a></h3>
+<p>应该是明天升级。</p>
+<p>注意一下，我的真气和灵力提升了1点。</p>
+<p>一直用法术攻击，偶尔会提升一点属性。到现在，应该提升了十几点了。</p>
+<h3 id="第五十九天2019年1月27号"><a class="header" href="#第五十九天2019年1月27号">第五十九天。2019年1月27号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-3bd19b858c09c63f986ed70432870da4_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升到54级了。</p>
+<p>考虑了一下:更新时间从中午十二点改到下午三点。中午十二点要吃饭，不太方便。</p>
+<p>在家里可以边看电视，边刷怪。刚看了《乱世佳人》。</p>
+<p>“Frankly，my dear，I don't give a damn.”</p>
+<p>喜欢这句台词。</p>
+<p>前几天一直在忙，可我还是挤出来时间。只要有心去做，总会有时间的。</p>
+<h3 id="第六十天2019年1月28号"><a class="header" href="#第六十天2019年1月28号">第六十天。2019年1月28号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-5270dd6db1e8462004540100982f0b47_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>年关将近，来家里的亲戚多了。就这样。</p>
+<p>说一下我的刷怪方法:</p>
+<p>方法是“直角刷怪法”，是一种我总结出来的刷怪最优解。</p>
+<p><img src="https://pica.zhimg.com/50/v2-24671657654ffb16c69a8c636f18985c_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>1，将全地图怪聚集起来后，拉入绿色方块区域内。人物站到图示位置。</p>
+<p>2，按←键，离开图示区域。等待80s，再按→键，回到图示区域。</p>
+<p>3，进行刷怪。刷怪完成后，继续走到图示位置。</p>
+<p>4，按↓键，离开图示区域。等待80s，再按↑键，回到图示区域。</p>
+<p>5，重复3。</p>
+<p>6，重复2。</p>
+<p>7，重复3。</p>
+<p>8，重复4。</p>
+<p>9，重复3。</p>
+<p>。。。</p>
+<p>后面就是一直重复了。</p>
+<p>这种方法有两个好处:</p>
+<p>1，避免走位失误。只要一直按着某个方向键就可以。如果有怪被角拦住，就继续向前走。</p>
+<p>2，有效控制怪的位置。可以把所有怪控制在绿色方框之中。</p>
+<h3 id="第六十一天2019年1月29号"><a class="header" href="#第六十一天2019年1月29号">第六十一天。2019年1月29号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-20345f127a8898acc55811cee2d5bf30_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>转眼六十天了。</p>
+<p>现在这样子，有种快要高考的感觉。害怕一不留神，就赶不上进度了。</p>
+<p>和高考不一样的是，高考是我不得不走的路。这却是一条我自己选择的路。也盼望以后的人生，可以在自己选择的道路上策马扬鞭。</p>
+<h3 id="第六十二天2019年1月30号"><a class="header" href="#第六十二天2019年1月30号">第六十二天。2019年1月30号。</a></h3>
+<p>(•́ω•̀ )刚开始，我想着最多就有四五十个评论。。。。</p>
+<h3 id="第六十三天2019年1月31号"><a class="header" href="#第六十三天2019年1月31号">第六十三天。2019年1月31号。</a></h3>
+<p>55级了。</p>
+<p>早上去参加婚礼了，不然还能更多。</p>
+<p>继续。</p>
+<h3 id="第六十四天2019年2月1号"><a class="header" href="#第六十四天2019年2月1号">第六十四天。2019年2月1号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-99ff2e6723db8d059fdd989fe695422a_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>二月了。</p>
+<h3 id="第六十五天2019年2月2号"><a class="header" href="#第六十五天2019年2月2号">第六十五天。2019年2月2号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-8f05a2005ae86fd4d3f16fa5525bee40_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>明天升级。</p>
+<p>最近进度有点慢。</p>
+<h3 id="第六十六天2019年2月3号"><a class="header" href="#第六十六天2019年2月3号">第六十六天。2019年2月3号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-9ba18de470016f4c746b189e37090fe4_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升级了。56级了。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-a3dad977e103859f08cb3e45879c502b_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>今天加快进度了。</p>
+<p>明天是除夕，后天是春节。我是不是该考虑给自己放个假？</p>
+<h3 id="第六十七天2019年2月4号"><a class="header" href="#第六十七天2019年2月4号">第六十七天。2019年2月4号。</a></h3>
+<p>过春节放假，等到初七再继续更新。</p>
+<h3 id="第六十八天到七十三天"><a class="header" href="#第六十八天到七十三天">第六十八天到七十三天。</a></h3>
+<p>2019年2月5号-2019年2月10号。</p>
+<p>休假，无更新。（2019年2月11号补上。）第七十五天。2019 年2月13号。</p>
+<p>就这样。</p>
+<h3 id="第七十四天2019年2月11号"><a class="header" href="#第七十四天2019年2月11号">第七十四天。2019年2月11号。</a></h3>
+<p>升到五十七级。</p>
+<p>新年的第一天，继续十里坡之路。现在武力上300，真气突破八百。</p>
+<p>还有一个半月，就升到71级。也没什么好说的，继续努力。第七十五天。2019 年2月13号。</p>
+<p>就这样。</p>
+<h3 id="第七十五天2019年2月12号"><a class="header" href="#第七十五天2019年2月12号">第七十五天。2019年2月12号。</a></h3>
+<p>(￢_￢)爱情降临了，我是不是应该。。。她说不喜欢打游戏的人。</p>
+<p>´_&gt;`唉。</p>
+<p>仔细想想，如果爱情能像游戏这么简单就好了。只要你坚持练下去，就一定能打败boss。就像我现在，只要坚持下去，十里坡剑神总会练成的。可是爱情却不是这样，坚持再多年，我却没有见过她回头看我。</p>
+<p>算了吧，还是做一件我确定能完成的事情吧。继续我的十里坡之旅。</p>
+<h3 id="第七十六天2019年2月14号"><a class="header" href="#第七十六天2019年2月14号">第七十六天。2019年2月14号。</a></h3>
+<p>进度有些慢。</p>
+<p>估计明天升级。</p>
+<h3 id="第七十七天2019年2月15号"><a class="header" href="#第七十七天2019年2月15号">第七十七天。2019年2月15号。</a></h3>
+<p>差一点升级。</p>
+<h3 id="第七十八天2019年2月16号"><a class="header" href="#第七十八天2019年2月16号">第七十八天。2019年2月16号。</a></h3>
+<p>明天开学，现在在火车上。</p>
+<p>已经升到58级，明天补图。</p>
+<h3 id="第七十九天2019年2月17号"><a class="header" href="#第七十九天2019年2月17号">第七十九天。2019年2月17号。</a></h3>
+<p>升到58级了。</p>
+<p>开学了。现在已经到学校了。</p>
+<p>一个寒假，一共升了八级。如果是暑假，现在十里坡剑神应该完成了。</p>
+<p>继续。</p>
+<h3 id="第八十天2019年2月18号"><a class="header" href="#第八十天2019年2月18号">第八十天。2019年2月18号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-cb10b1252f5c447a6b0e53c22f78865f_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>应该明天升级。</p>
+<h3 id="第八十一天2019年2月19号"><a class="header" href="#第八十一天2019年2月19号">第八十一天。2019年2月19号。</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-ac91a5d20237f432e1cb86ffe8c68680_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升级了。</p>
+<h3 id="第八十二天2019年2月20号"><a class="header" href="#第八十二天2019年2月20号">第八十二天。2019年2月20号。</a></h3>
+<p>新学期课程变多了。（也在知乎想法中更新。）</p>
+<h3 id="第八十三天2019年2月21号"><a class="header" href="#第八十三天2019年2月21号">第八十三天。2019年2月21号。</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-dc152484ca7020de0f563279a12a8626_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>明天升级。</p>
+<p>要是天天都能像今天这个进度，那估计能少用不少时间。</p>
+<h3 id="第八十四天2019年2月22号倒数33天"><a class="header" href="#第八十四天2019年2月22号倒数33天">第八十四天。2019年2月22号。（倒数33天）</a></h3>
+<p>升到六十级了。还差11级。</p>
+<p>升一级要3天。也就是还要33天，就可以到71级。</p>
+<p><img src="https://pica.zhimg.com/50/v2-ab98ba9636eb49f6c564155cc35e1d0f_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>从今天开始倒数，一直到71级。</p>
+<p>希望在预计时间内完成。</p>
+<h3 id="第八十五天2019年2月23号倒数32天"><a class="header" href="#第八十五天2019年2月23号倒数32天">第八十五天。2019年2月23号。（倒数32天）</a></h3>
+<p>就这样。</p>
+<h3 id="第八十六天2019年2月24号倒数31天"><a class="header" href="#第八十六天2019年2月24号倒数31天">第八十六天。2019年2月24号。（倒数31天）</a></h3>
+<p>升级了。截图慢了一下，等级被挡住了。</p>
+<p>升到61级了。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-629137bf6e8dbda5816a8ab8256d299b_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>星期天有点猛啊，一天18000的经验。</p>
+<p>我现在基本上，3小时是4000经验。18000就是肝了13.5个小时，再考虑有失误走神一类的，应该是14个小时吧。事实上，我的操作失误基本为零了。</p>
+<p>如果一天肝24个小时，那就是32000，就是一天就能升一级。</p>
+<p>查了一下以前的记录。我在第四十四天的时候，也就是1月12号，那一天我肝了二十个小时以上，一天就升了一级。</p>
+<p>如果每天二十个小时以上，那一个暑假就可以完成了。´_&gt;`</p>
+<h3 id="第八十七天2019年2月25号倒数30天"><a class="header" href="#第八十七天2019年2月25号倒数30天">第八十七天。2019年2月25号。（倒数30天）</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-4cf2459dea31fbc2d9afd09ecda4364f_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>开始用进度一。</p>
+<p>我留好几个存档，是为了以后，如果有人质疑，我可以用来自证。</p>
+<p>等到71级，我会把游戏和存档打包发出来，方便大家检查。</p>
+<p>还有，我打算练到72级，超过原来的十里坡剑神。既然都做到这了，不如突破原来的记录。</p>
+<p>等这肝完，我会做一个关于十里坡剑神通关仙剑1的视频。</p>
+<p>最后谢谢评论区的各位。</p>
+<p>如果不是那一次又一次的“加油”，我可能早就放弃了。</p>
+<p>谢谢。( ͡° ͜ʖ ͡°)✧</p>
+<h3 id="第八十八天2019年2月26号倒数29天"><a class="header" href="#第八十八天2019年2月26号倒数29天">第八十八天。2019年2月26号。（倒数29天）</a></h3>
+<p>升到62级。</p>
+<p>是我错觉吗？最近觉得升级蛮快的。</p>
+<p>刚刚好升级。</p>
+<h3 id="第八十九天2019年2月27号倒数28天"><a class="header" href="#第八十九天2019年2月27号倒数28天">第八十九天。2019年2月27号。（倒数28天）</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-691dd7dbb754eb43111779f226ee3bf9_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>今天一万一的经验。</p>
+<p>我第一次玩仙剑1的时候，在将军墓迷路了。找攻略看，我又看不懂地图。我都找不到自己的位置。</p>
+<p>然后我自己开始画地图，画了四五张地图。还是那种只有我自己能看懂的地图。</p>
+<p>最后用了一个星期，过了将军墓。。。</p>
+<p>可惜找不到地图了。</p>
+<h3 id="第九十天2019年2月28号倒数27天"><a class="header" href="#第九十天2019年2月28号倒数27天">第九十天。2019年2月28号。（倒数27天）</a></h3>
+<p>现在经验是两万七，一天肝了一万六。一万六经验的话，理论上是肝十二小时。实际上会更长。</p>
+<p><img src="https://pica.zhimg.com/50/v2-39af53cb257550eeaf5921796b6767c9_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>想看图片的话，可以到我的想法里面第一条查看。（原来不能上传图片，现在没事了。）</p>
+<h3 id="第九十一天2019年3月1号倒数26天"><a class="header" href="#第九十一天2019年3月1号倒数26天">第九十一天。2019年3月1号。（倒数26天）</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-88b823eebfabed2be1aa14eae43f2523_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升到63级。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-2bc908180a941028a169d6f84557aa45_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>不知不觉已经三个月过去了。</p>
+<p>我的生日就在这个月，离倒计时结束那天也很近。我打算控制一下进度，让成为十里坡剑神的那一天刚好是我生日那一天。</p>
+<h3 id="第九十二天2019年3月2号倒数25天"><a class="header" href="#第九十二天2019年3月2号倒数25天">第九十二天。2019年3月2号。（倒数25天）</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-75b420eca31b7aa94c3dc4081582350c_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>一万三，还可以。</p>
+<p>仔细想想，从我在十里坡练到三十级开始，就是一条孤独的路了。只是单纯的从第一名向着传说前进。除了传说外，没人到过三十六级，没人到过四十级，没有人到过五十级，没有人到过六十级。可相比传说，我又比他快了太多了。如果是半年时间，我足够到九十级，甚至九十九级。</p>
+<p>(￢_￢)我现在好像不是在证明十里坡剑神到底存不存在，而是要打败十里坡剑神。</p>
+<h3 id="第九十三天2019年3月3号倒数24天"><a class="header" href="#第九十三天2019年3月3号倒数24天">第九十三天。2019年3月3号。（倒数24天）</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-b5a7280f660e3c39163aec3d7a5106e0_720w.jpg?source=2c26e567" alt="升到64级。" /><img src="https://pic1.zhimg.com/50/v2-67f8af4ab6f7d1707025dde39005f269_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>继续努力。</p>
+<h3 id="第九十四天2019年3月4号倒数23天"><a class="header" href="#第九十四天2019年3月4号倒数23天">第九十四天。2019年3月4号。（倒数23天）</a></h3>
+<p>一万经验。</p>
+<p>进度刚刚好，一天一万的话。等到倒数结束，刚好72级。</p>
+<h3 id="第九十五天2019年3月5号倒数22天"><a class="header" href="#第九十五天2019年3月5号倒数22天">第九十五天。2019年3月5号。（倒数22天）</a></h3>
+<p>经验条大概是这样:</p>
+<p>27420/32000（64级）</p>
+<p><img src="https://pica.zhimg.com/50/v2-d8cfd8a9bfce544b252ea411483c3f6f_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>明天升级。</p>
+<p>´_&gt;`又上传不了图片了。想看图片的到我的想法里面查看。</p>
+<p>是这个问题图片太多了，还是更新次数太多了。老是出bug，要不没反应，要不然闪退。</p>
+<h3 id="第九十六天2019年3月6号倒数21天"><a class="header" href="#第九十六天2019年3月6号倒数21天">第九十六天。2019年3月6号。（倒数21天）</a></h3>
+<p>经验条的样子:</p>
+<p>4768/32000（65级）</p>
+<p>升了一级</p>
+<p>好了。</p>
+<h3 id="第九十七天2019年3月7号倒数20天"><a class="header" href="#第九十七天2019年3月7号倒数20天">第九十七天。2019年3月7号。（倒数20天）</a></h3>
+<p>经验条的样子:</p>
+<p>22400/32000（65级）</p>
+<p>没有课，就是快啊。</p>
+<p>图片暂时无法上传回答。</p>
+<h3 id="第九十八天2019年3月8号倒数19天"><a class="header" href="#第九十八天2019年3月8号倒数19天">第九十八天。2019年3月8号。（倒数19天）</a></h3>
+<p>经验条的样子:</p>
+<p>4536/32000（66级）</p>
+<p><img src="https://pic1.zhimg.com/50/v2-0efe025440d33c6579b5d9902beb5eee_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升了一级。还是无法上传图片。</p>
+<p>三八妇女节快乐！</p>
+<h3 id="第九十九天2019你3月9号倒数18天"><a class="header" href="#第九十九天2019你3月9号倒数18天">第九十九天。2019你3月9号。（倒数18天）</a></h3>
+<p>截图上传不了，我只能再用手机截一次。</p>
+<h3 id="第一百天2019年3月10号倒数17天"><a class="header" href="#第一百天2019年3月10号倒数17天">第一百天。2019年3月10号。（倒数17天）</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-6a6c17c14ccf7a0b9c00d3a3d58dc979_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>明天升级。</p>
+<p>第一百天了。</p>
+<h3 id="第一百零一天2019年3月11号倒数16天"><a class="header" href="#第一百零一天2019年3月11号倒数16天">第一百零一天。2019年3月11号。（倒数16天）</a></h3>
+<p>升到67级了。</p>
+<p><img src="https://pica.zhimg.com/50/v2-4e1efcdee6abaee855f21aad296d5fb8_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>很快就能完成了。</p>
+<h3 id="第一百零二天2019年3月12号倒数15天"><a class="header" href="#第一百零二天2019年3月12号倒数15天">第一百零二天。2019年3月12号。（倒数15天）</a></h3>
+<p>一万二经验。</p>
+<h3 id="第一百零三天2019年3月13号倒数14天"><a class="header" href="#第一百零三天2019年3月13号倒数14天">第一百零三天。2019年3月13号。（倒数14天）</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-36116bea6b5270c7f7f4d467e0b6ed98_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>明天升级。还差两周。</p>
+<h3 id="第一百零四天2019年3月14号倒数13天"><a class="header" href="#第一百零四天2019年3月14号倒数13天">第一百零四天。2019年3月14号。（倒数13天）</a></h3>
+<p>升到了68级。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-40cf60b81bbf9b54fe94eee6ba4b572b_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>又生病了。一点小感冒，并不耽误事。从小体弱，每年都要生病。也没什么的。</p>
+<h3 id="第一百零五天2019年3月15号倒数12天"><a class="header" href="#第一百零五天2019年3月15号倒数12天">第一百零五天。2019年3月15号。（倒数12天）</a></h3>
+<p><img src="https://pica.zhimg.com/50/v2-038c27ff78f1ea02815276ae3304986e_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>就这样。</p>
+<h3 id="第一百零六天2019年3月16号倒数11天"><a class="header" href="#第一百零六天2019年3月16号倒数11天">第一百零六天。2019年3月16号。（倒数11天）</a></h3>
+<p>有人说十里坡剑神有一个支线任务——十里坡武神。就是在十里坡让灵儿练出武神技能。</p>
+<p>我现在去救灵儿，完成十里坡武神。</p>
+<p>爬绳子救灵儿。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-90482c1325f2ecdf63d276b3e9e1c767_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>回到仙灵岛。</p>
+<p><img src="https://pica.zhimg.com/50/v2-740df288d9369495191a65f9fe749bf0_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>拿走刚开始忘记拿的苗刀。</p>
+<p>胆大包天，不知死活。。。说的是我吗？打他的录了视频，已经传b站了。等审核通过，就放链接。</p>
+<p>李逍遥好像很久没睡了</p>
+<p><img src="https://pic1.zhimg.com/50/v2-0cb845761f5d6ff449ea1ce6f7302268_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>灵儿在哭了。</p>
+<p><img src="https://pica.zhimg.com/50/v2-562aedbbc9a5cb4a5c699c14bac653cf_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>唉:-(如果和灵儿一起在十里坡度过一生该多好。就没有那么多悲剧了。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-8dcb3f8d1574dc0e60c6dc7a6a84915b_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>把灵儿拐去十里坡刷怪。</p>
+<p>今天的进度:</p>
+<p><img src="https://picx.zhimg.com/50/v2-078d359149a5535a8c167849ad2e2afb_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://picx.zhimg.com/50/v2-9cd08d5d49f04c97829a44bc89983e26_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>突然感觉十里坡也不是那么孤独了。</p>
+<h3 id="第一百零七天2019年3月17号倒数10天"><a class="header" href="#第一百零七天2019年3月17号倒数10天">第一百零七天。2019年3月17号。（倒数10天）</a></h3>
+<p>李逍遥升到69级了。</p>
+<p><img src="https://pica.zhimg.com/50/v2-26cf65a7b7d0182cac607863cc682498_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>灵儿的第一天。</p>
+<p>灵儿初始等级是5级。一天升了12级，现在是17级。十天以内，让灵儿练出武神。</p>
+<p>我翻了一下纪录，上次李逍遥升到17级，用了两天半。刷怪效率确实提高了不少。</p>
+<p><img src="https://picx.zhimg.com/50/v2-cf247ae8a0b26b838542973deacd5c96_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>8级到9级，没截好图。</p>
+<p><img src="https://picx.zhimg.com/50/v2-87b4a7b253f502e5499370553209760a_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://picx.zhimg.com/50/v2-e9edbd9028c025bc498944f2f2daf968_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>12级升13级，没来得及截图。截得等级图。</p>
+<p><img src="https://picx.zhimg.com/50/v2-140826023915d42c9ee827d6e2ee5fcb_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://picx.zhimg.com/50/v2-2c0f3f8992871f1a62b74d2528998aef_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://picx.zhimg.com/50/v2-e102dbb470140b5aa645cc1a34fddb2f_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://pica.zhimg.com/50/v2-3c81c720d947af2c939afcddeb766e0e_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p><img src="https://pic1.zhimg.com/50/v2-d724e7b53c5100cb3fd49249865460a9_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>现在的等级面板。</p>
+<p>现在在用李逍遥防御，灵儿放五雷决打怪。效率非常高。</p>
+<p>上一次练出剑神，用了十七天。这一次练出武神，应该可以十天以内完成。</p>
+<h3 id="第一百零八天2019年3月18号倒数9天"><a class="header" href="#第一百零八天2019年3月18号倒数9天">第一百零八天。2019年3月18号。（倒数9天）</a></h3>
+<p>李逍遥经验条:</p>
+<p>23206/32000（69级）</p>
+<p>灵儿第二天。</p>
+<p>升到了21级。一天升了四级。</p>
+<p>经验条:</p>
+<p>1098/5265（21级）</p>
+<p>又双叒上传不了截图了。想看截图，到我的想法里面查看。</p>
+<p>不到十天，就结束了。</p>
+<p>现在，我可以想想怎么写最后的总结。</p>
+<h3 id="第一百零九天2019年3月19号倒数8天"><a class="header" href="#第一百零九天2019年3月19号倒数8天">第一百零九天。2019年3月19号。（倒数8天）</a></h3>
+<p><img src="https://picx.zhimg.com/50/v2-8b5b47742ab32de7548e23583ecc5497_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升到70级了。距离最终目标只差2级了。</p>
+<p><img src="https://picx.zhimg.com/50/v2-95edcdc15e1c096dcf22ef5e5e11445d_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>还行。最后一点了。</p>
+<p>灵儿的第三天。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-dfe7b4b8e4dd582bb928f3b15b509b47_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>升了2级。现在23级了。应该来得及。</p>
+<p>金钱超过一百万了。存档888，留个纪念</p>
+<h3 id="第一百一十天2019年3月20号倒数7天"><a class="header" href="#第一百一十天2019年3月20号倒数7天">第一百一十天。2019年3月20号。（倒数7天）</a></h3>
+<p>可能今天看的人比较多，暂时上传不了图片。</p>
+<p>李逍遥的经验条:</p>
+<p>19232/32000（70级）</p>
+<p>明天升到71级。但是我的目标是超过原来的十里坡剑神。我打算练到72级。</p>
+<p>灵儿的第四天:</p>
+<p>灵儿的经验条:</p>
+<p>4814/7515（25级）</p>
+<p>灵儿升了两级。灵儿的目标是练出武神技能，完成十里坡武神。</p>
+<p>我是看了另一位答主@X.Y的答案，才决定来十里坡挑战的。如果不是他的数据的话，我也不会来做这个挑战。并且他也给了我很多的帮助。我们不是对立的，应该算是互相成就吧。</p>
+<p>评论区有人说，可以通过回复所有人来回复。但是我还是会一条条回复过去的，因为这是刚开始说好的，说好了就一定要做到。</p>
+<p>今天来看的人比较多，可是我还是要保持本心。不论怎么样，一定要完成72级的目标。</p>
+<h3 id="第一百一十一天2019年3月21号倒数4天"><a class="header" href="#第一百一十一天2019年3月21号倒数4天">第一百一十一天。2019年3月21号。（倒数4天）</a></h3>
+<p>按照进度来说，用不了六天了。我把倒计时调整了一下。本来应该是星期日，可是星期六有课，推迟一天吧。</p>
+<p>现在已经71级了，我到达了原来的剑神的位置。现在我要继续前进，去更高的位置。</p>
+<p>新的十里坡剑神已经诞生了。可我要超过原来的十里坡剑神。</p>
+<p><img src="https://pica.zhimg.com/50/v2-7d9ec4f2e65bb12e563b243e81a8efa4_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>还差最后一级。</p>
+<p>灵儿第五天:</p>
+<p>升了2级，现在27级了。</p>
+<p><img src="https://pica.zhimg.com/50/v2-ec3349c2778ad97d52adb366bdf4ed74_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>距离不远了。</p>
+<p>再过几天，灵儿的十里坡武神就成功了。</p>
+<p>不止是十里坡剑神，还是十里坡武神。</p>
+<h3 id="第一百一十二天2019年3月22号倒数第3天"><a class="header" href="#第一百一十二天2019年3月22号倒数第3天">第一百一十二天。2019年3月22号。（倒数第3天）</a></h3>
+<p>灵儿第六天:</p>
+<p>升到了29级。</p>
+<p>在完成十里坡剑神的同时，顺便完成十里坡武神。</p>
+<p><img src="https://pic1.zhimg.com/50/v2-098bdaa4948e37f53c5c96bb8d150721_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>如果肝一点的话，很可能明天就72级。只是灵儿可能要慢一点。</p>
+<p>证明传说最好的方式，不是拿出各种证据，而是变成传说。</p>
+<p>山不过来，我就过去。</p>
+<p>（过几天，会调整一下排版。）</p>
+<h3 id="2019年3月23号倒数第2天"><a class="header" href="#2019年3月23号倒数第2天">2019年3月23号。（倒数第2天）</a></h3>
+<p><img src="https://pic1.zhimg.com/50/v2-4034065b6d47e1b6ebd36b3a52c66631_720w.jpg?source=2c26e567" alt="Image" /></p>
+<p>就差最后一点了。</p>
+<p>灵儿第七天:</p>
+<p>灵儿升到30级。升到30级的界面图丢失。</p>
+<p>明天就结束了。</p>
+<p>我本来打算我的生日，也就是3月28号结束。可是我比预计的快了几天。</p>
+<p>历时114天的十里坡之旅，将在明天结束。</p>
+<p>结束后，我会挨着回复评论区的评论。2019年3月24号中午12点之后的评论，我将不再回复。</p>
+<p><code>'_&gt;</code>明天我会做一下总结，为十里坡剑神的真假画上句号。</p>
+<p>等明天我一出关，我就去暴打石长老，让你抢灵儿！</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="徐洪慈.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="徐洪慈.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

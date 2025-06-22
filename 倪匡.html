@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>逃離魔窟的步行者隊代表——倪匡 - 傳奇人生</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">傳奇人生</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="逃離魔窟的步行者隊代表倪匡"><a class="header" href="#逃離魔窟的步行者隊代表倪匡">逃離魔窟的步行者隊代表——倪匡</a></h1>
+<ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E5%80%AA%E5%8C%A1%E7%94%9F%E5%B9%B3">倪匡生平</a></li>
+</ul>
+<h2 id="前言"><a class="header" href="#前言">前言</a></h2>
+<p>人生經歷非常豐富，尤其是逃離魔窟這段。</p>
+<h2 id="倪匡生平"><a class="header" href="#倪匡生平">倪匡生平</a></h2>
+<p>倪匡，于1935年5月生于上海市黄浦区霞飞路（今淮海中路）。</p>
+<p>少年时的倪匡是一个狂热的理想社会主义者。1951年，16岁的倪匡为了追求理想，从上海中学辍学，孤身一人从上海前往苏州，经过考试，进入华东人民革命大学第四部受训三个月，然后参加中国人民解放军华东公安部队成为基层军官。</p>
+<p>毕业后，倪匡参与过苏南的土地改革和苏北洪泽湖的治理淮河的工程，参加了双沟引河工程（在泗洪县双沟镇，五万人日夜抢工赶在汛期涨水之前挖出一条人工河道，连接淮河和洪泽湖，长五十公里，最深处要挖下去二十七米）和南潮河水闸工程。</p>
+<p>1952－1953年间，倪匡被调往苏北，在苏北滨海县废黄河边上的七套至陈家港一带，开垦盐碱地创办劳改农场“华东军政委员会公安部新人农场”（现名江苏省监狱局洪泽湖监狱），占地七十万亩容纳五万人，主要种棉花。</p>
+<p>1954年，倪匡又被指派参加建造北起自陈家港，南迄废黄河口，建造一道全长超过五十公里高四米的海堤，以保护五十万亩即将开垦的荒地不受海水倒灌侵袭。</p>
+<p>1955年中，倪匡志愿报名去内蒙古呼伦贝尔盟扎赉特旗绰儿河畔开辟劳改农场“保安沼机耕农场”（现为内蒙古自治区监狱局保安沼监狱）种植水稻。</p>
+<p>之后刚刚20岁的倪匡带了一批劳改犯人先到镇江，换乘火车专列北上，经郑家屯、在黑龙江省泰来县下火车，最后步行或乘马车三天到目的地。</p>
+<p>到达目的地后，倪匡被归入第四大队，大队长为蒙古族巴图，大队书记为汉族丁建民。</p>
+<p>由于倪匡虽然年轻，但是受过良好的教育，且已经有过4年基层建设管理经验，因此他争取到多次出差机会，深入大兴安岭林区深处采购基建木材，到东北的大中城市采购物资。</p>
+<p>在这个过程中，倪匡渐渐发现新的政权下，种种不合理、不平等的行为，跟宣传的平等世界完全是两码事。他发现在他身边，军队内部就有不少特权，而且事无大小都要汇报思想、开会检讨，令爱好自由的倪匡越发感到不满和失望，经常跟上级争拗。和上级的矛盾越来越深。</p>
+<p>1955－1956年冬，倪匡偷偷饲养了一条狼狗，大队长巴图为了为难倪匡，故意说要杀狗吃掉，倪匡阻止，双方争执下狼狗反抗，咬伤大队长，双方矛盾更深。</p>
+<p>不久后，倪匡受命带领几个同伴外出办事，冰寒天气下，队伍受风雪封阻，缺乏燃料，他与同伴拆下一条简陋小木桥来生火取暖。（有人造谣说因为倪匡拆了小木桥导致一个拖拉机倾覆驾驶员死亡，这是彻头彻尾的谣言，这种简陋的能徒手拆卸的小木桥根本走不了拖拉机，当时内蒙寒冷的天气下简陋的拖拉机也无法外出）</p>
+<p>此事被与倪匡有矛盾的劳改大队书记丁建民得知后，他指倪匡“破坏交通”，将倪匡关在小木屋中隔离待罪，等待工作小组审查。</p>
+<p>一开始，倪匡觉得这也不是什么大罪，他本身已经是资深武警军官，不至于有什么严重处罚。</p>
+<p>好在倪匡平时为人豪爽开朗，在当地结交了一些朋友。</p>
+<p>1956年5月中旬的一天，一个蒙古朋友偷偷告知倪匡，大队长和大队书记想要给他定的罪名是“反革命”，这是可以枪毙的罪名。朋友告诉倪匡，乘现在看管不紧，赶紧逃跑。一旦罪名确定就跑不了了。</p>
+<p>当天晚上，朋友在营地外准备了马匹。</p>
+<p>倪匡偷偷逃出大队，连夜骑马赶到泰来县火车站，乘坐列车到达大连，再乘船往上海。</p>
+<p>倪匡本来想投奔在上海的兄长，但发现上海也并不安全。于是他继续南逃，期间多次露宿野外，靠吃老鼠、蚂蚁、棉桃充饥，又走了三个月的路到达广州。</p>
+<p>倪匡之所以能一路潜逃几千公里不被抓住，一来他自己担任武警军官多年，反侦察经验非常丰富，二来他长期带队从事野外农垦，野外生存经验丰富，三来是他有一个绝活，就是会刻各种印章，且由于工作经验，他非常清楚各种不同单位的印章是什么样的，通过虚刻公章，他制造了各种通行文件不露破绽。</p>
+<p>到达广州后，倪匡也是通过刻制印章，瞒过关防人员，成功逃离中国大陆，经澳门于1957年7月5日成功偷渡到香港，与父母团聚。</p>
+<p>整个逃亡过程耗时13个月有余。</p>
+<p>倪匡抵港初期在荃湾当杂工，1957年秋入读联合书院新闻系，以笔名“衣其”向《工商日报》投稿短篇小说，处女作为以其亲身经历的土地改革运动为背景的小说《活埋》，于当年10月27日见报，从此决定以写作为谋生手段。</p>
+<p>未毕业时，他已获《真报》聘用，先后出任校对、助理编辑、记者和政论专栏作家，无所不写，被称为“通天主笔”。由于司马翎连载的小说专栏拖稿，倪匡自荐续稿代写，效果不俗，又以“岳川”之名在《真报》连载武侠小说《七宝双英传》，自此崭露头角。令其真正一举成名的当属在当时大热的007电影风潮下创作的“女黑侠木兰花系列”，因混合武侠、科幻、奇情等元素深受读者追捧，在众报馆邀约下，倪匡在高峰期同时为12家报刊撰写风格各异的连载小说，稿费冠绝全港。</p>
+<p>1963年，倪匡在好友金庸鼓励下开始用笔名“卫斯理”在《明报》副刊连载“时装武侠小说”，及后演变为科学幻想小说，以第一人称的角度展开各种异想天开、离奇怪诞的故事，开创了风靡华人世界的“卫斯理系列”。1960年代末，香港武侠片兴起，倪匡在小说创作期间同时从事剧本创作，在十多年间编写超过四百部电影剧本，与张彻导演合作无间，李小龙著名的虚构角色陈真亦为倪匡创作。</p>
+<p>1980年代，因《东方日报》邀稿，指明创造一个“像卫斯理又不是卫斯理”的人物，倪匡另开“原振侠系列”，也是其最后一个完整的小说系列，又推出《侠之大者——我看金庸小说》等金庸小说研究作品，成为往后文学界研究金庸作品的重要材料。1987年，担任香港作家协会会长。与黄霑、蔡澜共同主持的清谈节目《今夜不设防》。</p>
+<p>2005年，年届七十岁的倪匡坦言“上帝给我写作的配额，我已经用完了”，《只限老友》成为他最后一部出版的小说作品，往后仅在兴起时撰写杂文随笔。</p>
+<p>在其高产的创作生涯中，倪匡自称“自有人类以来汉字写得最多的人，速度之快，世界第一”，曾连续七、八年每日写20,000多字，写作速度最高记录是１小时4,500字，最慢也有１小时2,500字，除了歌词与广告词之外其他文类皆有涉猎，亦曾为金庸、古龙、诸葛青云等作家代笔，且从不拖稿或欠稿，甚至写完后还故意搁几日再交稿，仅于1994年因罹患“网球肘”而封笔几个月。</p>
+<p>2011年，倪匡成为香港小说会荣誉会长。2012年4月，倪匡获得第31届香港电影金像奖终身成就奖。</p>
+<p>2018年，倪匡获香港电影编剧家协会颁发编剧会银禧荣誉大奖。</p>
+<p>2022年7月3日，倪匡以87周岁高龄于黄竹坑南朗山道香港防癌会赛马会癌症康复中心安详离世，一生没有再踏足内地，没有回过上海老家。</p>
+<p>由此，“倪匡顺利逃港”和“胡适不肯上当”、“爱玲跑得太快”、“嘉诚不能共产”一起，成为某个群体的几大恨之一。</p>
+<p>来源：<a href="https://www.zhihu.com/question/1910615650939967067/answer/1914170328722147247">为什么胡适，张爱玲和李嘉诚在知乎会被放在一起？还有其他人能进去这个圈子吗？</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="前言.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="徐洪慈.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="前言.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="徐洪慈.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
